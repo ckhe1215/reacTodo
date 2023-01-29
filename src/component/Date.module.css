@@ -1,0 +1,19 @@
+.dateSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 4em 0;
+}
+
+.dateInfo {
+  text-align: center;
+  font-family: "Cardo", serif;
+  line-height: 1em;
+}
+
+.dateInfo h2 {
+  font-size: 4em;
+}
+
+.dateInfo h5 {
+  font-size: 1.5em;
+}
