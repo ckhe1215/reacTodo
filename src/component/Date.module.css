@@ -1,7 +1,8 @@
 .dateSection {
   display: flex;
   justify-content: space-between;
-  padding: 4em 0;
+  align-items: center;
+  height: 30%;
 }
 
 .dateInfo {

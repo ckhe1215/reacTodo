@@ -1,5 +1,6 @@
-button {
+.button {
+  display: flex;
+  justify-content: center;
   background: none;
   border: 0;
-  padding: 2em 1em;
 }
