@@ -1,0 +1,18 @@
+.textButton {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 3px 20px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.colorBlack {
+  background: black;
+  color: white;
+}
+
+.colorWhite {
+  background: white;
+  border: 1px solid gray;
+  color: black;
+}

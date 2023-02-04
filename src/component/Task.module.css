@@ -3,4 +3,14 @@
   border-radius: 10px;
   padding: 1.5em 1em;
   margin: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.frontGroup {
+  display: flex;
+}
+
+.backGroup {
+  display: flex;
 }

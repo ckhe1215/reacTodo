@@ -1,0 +1,35 @@
+.formTitle {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.inputGroup {
+  margin-bottom: 1em;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+.inputGroup input {
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1em;
+}
+
+.warning {
+  color: red;
+}
+
+.buttonSection {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonSection button:first-child {
+  margin-right: 0.5em;
+}
