@@ -7,6 +7,7 @@ import styles from "./Main.module.css";
 import ImageButton from "../UI/ImageButton";
 import addIcon from "../img/icon/add/black-24dp/2x/outline_add_circle_black_24dp.png";
 import Modal from "../UI/Modal";
+import { STATUS } from "../util/common.js";
 
 const Main = () => {
   const [focusedDate, setFocusedDate] = useState(new Date());
@@ -15,16 +16,19 @@ const Main = () => {
       id: 1,
       date: new Date("2023-01-29"),
       content: "영어 공부",
+      status: STATUS.START,
     },
     {
       id: 2,
       date: new Date(),
       content: "출근하기",
+      status: STATUS.DONE,
     },
     {
       id: 3,
       date: new Date(),
       content: "영어 공부",
+      status: STATUS.START,
     },
   ]);
   const [onModal, setOnModal] = useState(false);
@@ -45,7 +49,20 @@ const Main = () => {
       date: new Date(input.date),
       content: input.content,
     };
-    setTask([...task, newTask]);
+    setTask((prevState) => [...prevState, newTask]);
+  };
+
+  const handleTaskStatus = (id, status) => {
+    setTask((prevState) => {
+      let newTask = [...prevState];
+      newTask.map((item) => {
+        if (item.id === id) {
+          item.status = status;
+        }
+        return item;
+      });
+      return newTask;
+    });
   };
 
   return (
@@ -56,7 +73,11 @@ const Main = () => {
           setYesterday={setYesterday}
           setTomorrow={setTomorrow}
         />
-        <TaskList focusedDate={focusedDate} task={task} />
+        <TaskList
+          focusedDate={focusedDate}
+          task={task}
+          handleTaskStatus={handleTaskStatus}
+        />
       </article>
       {onModal &&
         ReactDOM.createPortal(

@@ -9,7 +9,13 @@ const TaskList = (props) => {
   return (
     <section className={styles.taskList}>
       {todayTask.map((item) => {
-        return <Task key={item.id} task={item}></Task>;
+        return (
+          <Task
+            key={item.id}
+            task={item}
+            handleTaskStatus={props.handleTaskStatus}
+          ></Task>
+        );
       })}
     </section>
   );
